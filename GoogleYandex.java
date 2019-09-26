@@ -1,6 +1,6 @@
-//Тест 1
+//РўРµСЃС‚ 1
 
-package com.pochta.tеsts;
+package com.pochta.tРµsts;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -17,9 +17,9 @@ public class GoogleYandex {
   @Before
   public void setUp() throws Exception {
 
-    //Создаем объект chrome driver.
+    //РЎРѕР·РґР°РµРј РѕР±СЉРµРєС‚ chrome driver.
     System.setProperty("webdriver.chrome.driver", "C:\\Java\\cromedriver\\chromedriver.exe");
-    ChromeOptions options = new ChromeOptions();
+            ChromeOptions options = new ChromeOptions();
     options.addArguments("disable-infobars");
     options.addArguments("--start-maximized");
     driver = new ChromeDriver(options);
@@ -32,18 +32,18 @@ public class GoogleYandex {
   public void testGoogleYandex() throws Exception {
     driver.get(baseUrl + "/");
 
-    //в поисковике вводим яндекс маркет
-    driver.findElement(By.name("q")).sendKeys("яндекс маркет");
+    //РІ РїРѕРёСЃРєРѕРІРёРєРµ РІРІРѕРґРёРј СЏРЅРґРµРєСЃ РјР°СЂРєРµС‚
+    driver.findElement(By.name("q")).sendKeys("СЏРЅРґРµРєСЃ РјР°СЂРєРµС‚");
     driver.findElement(By.xpath("//form[@id='tsf']/div[2]")).click();
 
-    //переходим по ссылке, открываются ссылки, в том числе яндекс маркет
+    //РїРµСЂРµС…РѕРґРёРј РїРѕ СЃСЃС‹Р»РєРµ, РѕС‚РєСЂС‹РІР°СЋС‚СЃСЏ СЃСЃС‹Р»РєРё, РІ С‚РѕРј С‡РёСЃР»Рµ РЅР° СЏРЅРґРµРєСЃ РјР°СЂРєРµС‚
     driver.findElement(By.cssSelector("div.FPdoLc.VlcLAe > center > input[name=\"btnK\"]")).click();
     driver.findElement(By.cssSelector("div.ellip")).click();
 
-    //Находим WebElement содержащий ссылки, получаем html элемента
+    //РќР°С…РѕРґРёРј WebElement СЃ id "rso" СЃРѕРґРµСЂР¶Р°С‰РёР№ СЃСЃС‹Р»РєРё, РїРѕР»СѓС‡Р°РµРј html СЌР»РµРјРµРЅС‚Р°
     WebElement WStr1 = driver.findElement(By.id("rso"));
-    String Str1 = WStr7.getAttribute("innerHTML");
-    //Здесь должен быть код, который проверяет, что первая ссылка в строке Str1 ссылается на яндекс маркет, т.е. href="https://market.yandex.ru/
+    String Str1 = WStr1.getAttribute("innerHTML");
+    //Р—РґРµСЃСЊ РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ РєРѕРґ, РєРѕС‚РѕСЂС‹Р№ РїСЂРѕРІРµСЂСЏРµС‚, С‡С‚Рѕ РїРµСЂРІР°СЏ СЃСЃС‹Р»РєР° РІ СЃС‚СЂРѕРєРµ Str1 СЃСЃС‹Р»Р°РµС‚СЃСЏ РЅР° СЏРЅРґРµРєСЃ РјР°СЂРєРµС‚, С‚.Рµ. href="https://market.yandex.ru/
     // { ... }
   }
 
