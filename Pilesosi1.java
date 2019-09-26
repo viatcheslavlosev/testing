@@ -16,8 +16,6 @@ import static org.junit.Assert.assertTrue;
 public class Pilesosi1 {
   private WebDriver driver;
   private String baseUrl;
-  private boolean acceptNextAlert = true;
-  private StringBuffer verificationErrors = new StringBuffer();
 
   @Before
   public void setUp() throws Exception {
