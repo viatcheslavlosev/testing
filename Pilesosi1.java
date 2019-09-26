@@ -61,7 +61,7 @@ public class Pilesosi1 {
     //Проверяем, что цена до=6000, установлена в фильтре
     WebElement WStr7 = driver.findElement(By.xpath("//*[@id=\"search-prepack\"]/div/div/div[3]/div/div/div[2]/div[1]/div/div/fieldset/div[1]/ul/li[2]"));
     String Str11 = WStr7.getAttribute("innerHTML");
-    //Здесь должен быть код, который проверяет, что в div в атрибуте value установлена цена 6000
+    //Здесь должен быть код, который проверяет, что в строке Str1 в атрибуте value установлена цена 6000
     // { ... }
 
     //Находим WebElement, содержащий  список всех доступные для выбора производителей
