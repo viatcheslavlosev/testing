@@ -19,7 +19,7 @@ public class GoogleYandex {
 
     //Создаем объект chrome driver.
     System.setProperty("webdriver.chrome.driver", "C:\\Java\\cromedriver\\chromedriver.exe");
-            ChromeOptions options = new ChromeOptions();
+    ChromeOptions options = new ChromeOptions();
     options.addArguments("disable-infobars");
     options.addArguments("--start-maximized");
     driver = new ChromeDriver(options);
