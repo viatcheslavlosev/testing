@@ -92,7 +92,7 @@ public class Pilesosi1 {
 
   @After
   public void tearDown() throws Exception {
-//    driver.quit();
+    driver.quit();
 
   }
 
